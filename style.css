@@ -1,0 +1,44 @@
+* {  /*reset all*/
+    margin: 0;
+    padding: 0;
+}
+
+/*LOG IN PAGE START*/
+.bgimg {  /*website login page background*/
+    height: 100%;
+    width: 100%;
+    background-image: url(websitebg.png);
+    background-position: center;
+    background-size: cover; /*always cover the entire screen*/
+    position: absolute;
+}
+
+.form-box{   /*login form box background*/
+    width: 380px;
+    height: 480px;
+    background: #FFC98B;
+    position: relative;
+    margin: 8% auto;
+    padding: 5px;
+}
+
+.button-box{  /*login and signup changing button background*/
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    background-color: #E89897;
+    border-radius: 30px;
+}
+
+.toggle-btn{ /*login and signup changing button*/
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;  /*remove default button bg color*/
+    border: 0; /*remove default button border*/
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    position: absolute;
+}
