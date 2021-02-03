@@ -43,7 +43,7 @@
 
 
 /*HOMEPAGE START (categories.html)*/
-.homepage-body{
+.homepage-body, .level-body{
     background-color: #FFEABA;
 }
 
@@ -56,6 +56,18 @@
     text-align: center;
 }
 
+#JPNquizbtn{   /*quiz categories button*/
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(Japan.png);
+}
+
+#JPNquizbtn:hover{
+    border-radius: 30%;   /*button on-click change radius*/
+}
+
 #quizbtn{   /*quiz categories button*/
     width: 300px;
     height: 300px;
@@ -64,7 +76,11 @@
 }
 
 #quizbtn:hover{
-    width: 300px;
-    height: 300px;
-    border-radius: 30%;
+    border-radius: 30%;   /*button on-click change radius*/
 }
+/*HOMEPAGE END (categories.html)*/
+
+
+
+/*LEVEL PAGE START*/
+
