@@ -7,7 +7,7 @@
 .bgimg {  /*website login page background*/
     height: 100%;
     width: 100%;
-    background-image: url(websitebg.png);
+    background-image: url(Image/websitebg.png);
     background-position: center;
     background-size: cover; /*always cover the entire screen*/
     position: absolute;
@@ -37,7 +37,6 @@
 .form-control{
     border-color: #F5CEC7;
 }
-
 /*LOG IN PAGE END*/
 
 
@@ -61,7 +60,7 @@
     height: 300px;
     background: transparent;
     margin-right: 50px;
-    background-image: url(Japan.jpg);
+    background-image: url(Image/Japan.jpg);
 }
 #JPNquizbtn:hover{
     border-radius: 30%;   /*button on-click change radius*/
@@ -72,7 +71,7 @@
     height: 300px;
     background: transparent;
     margin-right: 50px;
-    background-image: url(Cartoon.jpg);
+    background-image: url(Image/Cartoon.jpg);
 }
 #CTNquizbtn:hover{
     border-radius: 30%;   /*button on-click change radius*/
@@ -83,7 +82,7 @@
     height: 300px;
     background: transparent;
     margin-right: 50px;
-    background-image: url(English.png);
+    background-image: url(Image/English.png);
 }
 #ENGquizbtn:hover{
     border-radius: 30%;   /*button on-click change radius*/
@@ -94,13 +93,11 @@
     height: 300px;
     background: transparent;
     margin-right: 50px;
-    background-image: url(Animals.png);
+    background-image: url(Image/Animals.png);
 }
 #ANMquizbtn:hover{
     border-radius: 30%;   /*button on-click change radius*/
 }
-
-
 /*HOMEPAGE END (categories.html)*/
 
 
