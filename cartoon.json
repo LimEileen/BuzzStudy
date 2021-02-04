@@ -1,0 +1,137 @@
+{
+    "qns1":{
+        "question": "Who is Mickey Mouse’s girlfriend?",
+        "correct_answer": "Minnie",
+        "incorrect_answers": [
+            "Pluto",
+            "Goofy",
+            "Donald Duck"
+        ]
+    },
+    "qns2":{
+        "question": "What kind of animal is Pororo?",
+        "correct_answer": "Penguin",
+        "incorrect_answers": [
+            "Crocodile",
+            "Polar Bear",
+            "Fox"
+        ]
+    },
+    "qns3":{
+        "question": "There’s a starfish called Patrick and a snail called Gary. Which show is it?",
+        "correct_answer": "SpongeBob SquarePants",
+        "incorrect_answers": [
+            "The Super Mario Bros. Super Show!",
+            "Phineas and Ferb",
+            "Adventure Time"
+        ]
+    },
+    "qns4":{
+        "question": "I am yellow and square. My best friend is a star shaped pink guy. We both live under the sea. Which cartoon character am I?",
+        "correct_answer": "SpongeBob SquarePants",
+        "incorrect_answers": [
+            "Patrick",
+            "Sandy",
+            "Gary"
+        ]
+    },
+    "qns5":{
+        "question": "I am part of a team of super sleuths who solve mysteries and chase monsters. Even though I am a dog, I can still speak, though not clearly. Who am I?",
+        "correct_answer": "Scooby-Doo",
+        "incorrect_answers": [
+            "Velma Dinkley",
+            "Fred Jones",
+            "Shaggy Rogers"
+        ]
+    },
+    "qns6":{
+        "question": "Where do SpongeBob SquarePants and his friends live?",
+        "correct_answer": "Bikini bottom",
+        "incorrect_answers": [
+            "Under the sea",
+            "Rock house",
+            "Pineapple house"
+        ]
+    },
+    "qns7":{
+        "question": "I am coloured gray and love toying with bald hunters. What is my name?",
+        "correct_answer": "Bugs Bunny",
+        "incorrect_answers": [
+            "Daffy Duck",
+            "Elmer Fudd",
+            "Tweety"
+        ]
+    },
+    "qns8":{
+        "question": "What TV show contains a purple dinosaur who sings and dances?",
+        "correct_answer": "Barney and Friends",
+        "incorrect_answers": [
+            "Paw Patrol",
+            "Hello Kitty and Friends Supercute Adventures",
+            "Peppa Pig"
+        ]
+    },
+    "qns9":{
+        "question": "While Sandy was hibernating, what kind of weather did SpongeBob and Patrick encounter in the bubble where she lives?",
+        "correct_answer": "Snow",
+        "incorrect_answers": [
+            "Hurricane",
+            "Extreme heat",
+            "Tornado"
+        ]
+    },
+    "qns10":{
+        "question": "What are the colors of the Powerpuff girls?",
+        "correct_answer": "All of the above",
+        "incorrect_answers": [
+            "Red",
+            "Blue",
+            "Green"
+        ]
+    },
+    "qns11":{
+        "question": "What are the names of Powerpuff girls?",
+        "correct_answer": "All of the above",
+        "incorrect_answers": [
+            "Blossom",
+            "Bubbles",
+            "Buttercup"
+        ]
+    },
+    "qns12":{
+        "question": "My brother, Ferb, and I like to invent things to enjoy the long summer days. We've made a rollercoaster, a new season and even a haunted house. We annoy my sister, Candace, a lot with our antics. Who am I?",
+        "correct_answer": "Phineas Flynn",
+        "incorrect_answers": [
+            "Perry the Platypus",
+            "Dr. Heinz Doofenshmirtz",
+            "Jeremy Johnson"
+        ]
+    },
+    "qns13":{
+        "question": "What are the names of the bears in We Bare Bears?",
+        "correct_answer": "All of the above",
+        "incorrect_answers": [
+            "Grizzly",
+            "Panda",
+            "Ice Bear"
+        ]
+    },
+    "qns14":{
+        "question": "Name the type of bears in We Bare Bears?",
+        "correct_answer": "All of the above",
+        "incorrect_answers": [
+            "Panda",
+            "Polar Bear",
+            "Brown Bear"
+        ]
+    },
+    "qns15":{
+        "question": "",
+        "correct_answer": "",
+        "incorrect_answers": [
+            "",
+            "",
+            ""
+        ]
+    }
+}
