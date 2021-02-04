@@ -270,12 +270,183 @@
     ]
   },
   "qns31":{
-    "question": "Do camels store water in their humps?",
-    "correct_answer": "No",
+    "question": "What color does a penguin have?",
+    "correct_answer": "All of the above",
     "incorrect_answers": [
-      "Yes",
-      "Maybe",
-      "I don't know"
+      "Yellow",
+      "Black",
+      "White"
     ]
   },
+  "qns32":{
+    "question": "Which animal is smaller than you?",
+    "correct_answer": "Rabbit",
+    "incorrect_answers": [
+      "Pony",
+      "Horse",
+      "Cow"
+    ]
+  },
+  "qns33":{
+    "question": "Which animal is bigger than you?",
+    "correct_answer": "Giraffe",
+    "incorrect_answers": [
+      "Panda",
+      "Sea Lion",
+      "Fox"
+    ]
+  },
+  "qns34":{
+    "question": "Which animal has a mane?",
+    "correct_answer": "Lion",
+    "incorrect_answers": [
+      "Bear",
+      "Cheetah",
+      "Panda"
+    ]
+  },
+  "qns35":{
+    "question": "Which animal has spots on it?",
+    "correct_answer": "Leopard",
+    "incorrect_answers": [
+      "Buffalo",
+      "Snake",
+      "Kangaroo"
+    ]
+  },
+  "qns36":{
+    "question": "Which animal has more than 4 colors?",
+    "correct_answer": "Panther Chameleon",
+    "incorrect_answers": [
+      "Snake",
+      "Frog",
+      "Lobster"
+    ]
+  },
+  "qns37":{
+    "question": "Which animal has scales?",
+    "correct_answer": "Snake",
+    "incorrect_answers": [
+      "Sea Lion",
+      "Elephant",
+      "Rabbit"
+    ]
+  },
+  "qns38":{
+    "question": "Which animal has a shell on it?",
+    "correct_answer": "Giant Tortoise",
+    "incorrect_answers": [
+      "Crocodile",
+      "Bear",
+      "White Tiger"
+    ]
+  },
+  "qns39":{
+    "question": "Which animal swings from trees to trees?",
+    "correct_answer": "Monkey",
+    "incorrect_answers": [
+      "Koala Bear",
+      "Three-toed sloth",
+      "Malayan Flying Fox"
+    ]
+  },
+  "qns40":{
+    "question": "What is the lifespan of a tortoise?",
+    "correct_answer": "100 years and above",
+    "incorrect_answers": [
+      "100 years",
+      "100 years and below",
+      "50 years"
+    ]
+  },
+  "qns41":{
+    "question": "What is the lifespan of a California sea lion?",
+    "correct_answer": "30 Years",
+    "incorrect_answers": [
+      "40 Years",
+      "20 Years",
+      "10 Years"
+    ]
+  },
+  "qns42":{
+    "question": "Which mammal has the most powerful bite in the world?",
+    "correct_answer": "Hippopotamus",
+    "incorrect_answers": [
+      "White Rhinoceros",
+      "Crocodile",
+      ""
+    ]
+  },
+  "qns43":{
+    "question": "Which animal did the Guinness Book of World Records name as the most fearless animal?",
+    "correct_answer": "Honey Badger",
+    "incorrect_answers": [
+      "Leopard",
+      "Cheetah",
+      "Lion"
+    ]
+  },
+  "qns44":{
+    "question": "Lemurs are only native to one country, which one is it?",
+    "correct_answer": "Madagascar",
+    "incorrect_answers": [
+      "Australia",
+      "Indonesia",
+      "Egypt"
+    ]
+  },
+  "qns45":{
+    "question": "Which large marine mammals are sometimes known as sea cows?",
+    "correct_answer": "Manatees",
+    "incorrect_answers": [
+      "Hippopotamus",
+      "White Rhinoceros",
+      "Sea Lion"
+    ]
+  },
+  "qns46":{
+    "question": "Where is the habitat of a small-clawed otter?",
+    "correct_answer": "Freshwater swamps",
+    "incorrect_answers": [
+      "Sandy Beaches",
+      "Coastal waters",
+      "Shorelines"
+    ]
+  },
+  "qns47":{
+    "question": "Which animal’s tail is longer than its body?",
+    "correct_answer": "Ring-tailed Lemur",
+    "incorrect_answers": [
+      "Snake",
+      "Giraffe",
+      "Chameleon"
+    ]
+  },
+  "qns48":{
+    "question": "Which reptile has the strongest bite force?",
+    "correct_answer": "Estuarine Crocodile",
+    "incorrect_answers": [
+      "King Cobra",
+      "Komodo Dragon",
+      "Indian Gharial"
+    ]
+  },
+  "qns49":{
+    "question": "Which animal likes mud spa to cool themselves?",
+    "correct_answer": "White Rhinoceros",
+    "incorrect_answers": [
+      "Hippopotamus",
+      "Crocodile",
+      "Cow"
+    ]
+  },
+  "qns50":{
+    "question": "What does a Malayan flying fox have on a diet?",
+    "correct_answer": "Pollen",
+    "incorrect_answers": [
+      "Flower",
+      "Fruits",
+      "Vegetables"
+    ]
+  }
 }
