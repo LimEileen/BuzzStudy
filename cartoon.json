@@ -180,6 +180,96 @@
         ]
     },
     "qns21":{
+        "question": "What does she make while singing Let It Go?",
+        "correct_answer": "Her Ice Castle",
+        "incorrect_answers": [
+            "A cake",
+            "A cup of tea",
+            "A new dress"
+        ]
+    },
+    "qns22":{
+        "question": "Who is the captian of the teamin Paw Patrol?",
+        "correct_answer": "Ryder",
+        "incorrect_answers": [
+            "Skye",
+            "Tracker",
+            "Rubble"
+        ]
+    },
+    "qns23":{
+        "question": "How many pups are there in the whole team?",
+        "correct_answer": "8",
+        "incorrect_answers": [
+            "4",
+            "5",
+            "6"
+        ]
+    },
+    "qns24":{
+        "question": "Who is Everest?",
+        "correct_answer": "Snow Pup",
+        "incorrect_answers": [
+            "Construction Pup",
+            "Sea Pup",
+            "Jungle Pup"
+        ]
+    },
+    "qns25":{
+        "question": "Who is Skye?",
+        "correct_answer": "Air Pup",
+        "incorrect_answers": [
+            "Sea Pup",
+            "Police Pup",
+            "Recycle Pup"
+        ]
+    },
+    "qns26":{
+        "question": "Who is the mayor of Adventure Bay?",
+        "correct_answer": "Mayor Goodway",
+        "incorrect_answers": [
+            "Chikaleka",
+            "Mayor Humdinger",
+            "Ryder"
+        ]
+    },
+    "qns27":{
+        "question": "How many kittens does Mayor Humdinger have?",
+        "correct_answer": "6",
+        "incorrect_answers": [
+            "4",
+            "5",
+            "8"
+        ]
+    },
+    "qns28":{
+        "question": "What is the favorite show of Paw Patrol?",
+        "correct_answer": "Apollo the Super-Pup",
+        "incorrect_answers": [
+            "Tag-war",
+            "Pup pup Boogie",
+            "Hit the Target "
+        ]
+    },
+    "qns29":{
+        "question": "What is the name of Hello Kitty's twin sister?",
+        "correct_answer": "Mimmy",
+        "incorrect_answers": [
+            "Millie",
+            "Julie",
+            "Lily"
+        ]
+    },
+    "qns30":{
+        "question": "Where does Hello Kitty live?",
+        "correct_answer": "London, England",
+        "incorrect_answers": [
+            "New York City",
+            "Japan",
+            "Paris"
+        ]
+    },
+    "qns31":{
         "question": "",
         "correct_answer": "",
         "incorrect_answers": [
