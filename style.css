@@ -13,9 +13,9 @@
     position: absolute;
 }
 
-.formbox{   /*login form box background*/
+.form-container{   /*login form box background*/
     width: 380px;
-    height: 480px;
+    height: 500px;
     background: #FFC98B;
     position: relative;
     margin: 8% auto;
@@ -23,7 +23,7 @@
     border-radius: 20px;
 }
 
-.imgbox{   /*BuzzStudy icon img box*/
+.img-container{   /*BuzzStudy icon img box*/
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -32,6 +32,35 @@
 .icon{  /*BuzzStudy icon img*/
     width: 200px;
     height:100px;
+}
+
+.btn-container{
+    background-color: #E89897;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.togglebtn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent; /*remove btn default bg*/
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #F5CEC7;
+    border-radius: 30px;
+    transition: .5s;
 }
 
 .form-control{
@@ -103,4 +132,36 @@
 
 
 /*LEVEL PAGE START*/
+/*LEVEL PAGE END*/
 
+
+
+/*QUIZ PAGE START*/
+.info_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 540px;
+    background-color: #F5CEC7;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+  }
+  
+  ol li {
+    counter-increment: my-awesome-counter;
+  }
+  
+  ol li::before {
+    content: counter(my-awesome-counter) ". ";
+  }
+
+
+  .info_container .intro_title{
+      height: 60px;
+      border-bottom: 1px solid magenta;
+  }
+/*QUIZ PAGE END*/
