@@ -132,36 +132,227 @@
 
 
 /*LEVEL PAGE START*/
+#one{   /*1*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/1.png);
+}
+#two{   /*2*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/2.png);
+}
+#three{   /*3*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/3.png);
+}
+#four{   /*4*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/4.png);
+}
+#five{   /*5*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/5.png);
+}
+#six{   /*6*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/6.png);
+}
+#seven{   /*7*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/7.png);
+}
+#eight{   /*8*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/8.png);
+}
+#nine{   /*9*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/9.png);
+}
+#ten{   /*10*/
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin-right: 50px;
+    background-image: url(levels/10.png);
+
+}
 /*LEVEL PAGE END*/
 
 
 
-/*QUIZ PAGE START*/
+/*QUIZ INFO PAGE START*/
+.info_body{
+    background-color: #FFEABA;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
 .info_container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 540px;
+    width: 500px;
+    padding: 20px 20px 20px 20px;  
     background-color: #F5CEC7;
+    border-radius: 20px;
 }
 
-ol {
-    list-style: none;
-    counter-reset: my-awesome-counter;
-  }
-  
-  ol li {
-    counter-increment: my-awesome-counter;
-  }
-  
-  ol li::before {
-    content: counter(my-awesome-counter) ". ";
+.info_container .intro_title, .rules_title{
+      height: 40px;
+      border-bottom: 2px solid #e4817f;
   }
 
+.info_container .intro_lists, .rules_lists{
+    padding: 10px 35px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
-  .info_container .intro_title{
-      height: 60px;
-      border-bottom: 1px solid magenta;
-  }
+.info_container .quiz_btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info_container .quiz_btn button{
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+    border: 1px solid #e4817f;
+    background: #ffaea0;
+    cursor: pointer; /*display mouse cursor as a pointer*/
+    outline: none;
+    border-radius: 10px;
+}
+
+.info_container .quiz_btn button:hover{
+    color: white;
+    background: #e4817f;
+}
+/*QUIZ INFO PAGE END*/
+
+
+
+
+/*QUIZ PAGE START*/
+.quiz_body{
+    background-color: #FFEABA;
+}
+
+.quiz_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+    background-color: #ffaea0;
+    border-radius: 10px;
+}
+
+.quiz_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffaea0;
+    height: 70px;
+    padding: 0 30px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 3px 5px 1px #e4817f;
+}
+
+.qns_no{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.timer_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 45px;
+    background: #FFEABA;
+    padding: 0 8px;
+    border-radius: 10px;
+}
+
+.countdown{
+    font-weight: 600;
+    background: #FFC98B;
+    height: 25px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.qns_container{
+    padding: 20px 20px 20px 20px;
+}
+
+.qns_container .qns{
+    font-size: 30px;
+    font-family: 'Yusei Magic', sans-serif;
+    margin-bottom: 10px;
+}
+
+.opt_container{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.opt_container .option{
+    background: #FFEABA;
+    border: 2px solid #FFC98B;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.opt_container .option:hover{
+    color: rgb(35, 0, 161);
+    background: #fabeb4;
+}
+
+.nxt_btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px 30px 0;
+}
+
+.nxt_btn .nxt_qns_btn{
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-family: 'Yusei Magic', sans-serif;
+}
 /*QUIZ PAGE END*/
+
