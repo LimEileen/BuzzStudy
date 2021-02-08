@@ -5,39 +5,33 @@
     <meta name="viewport" content="width=device-width">
     <title>IP Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Google Font for qns-->
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="quiz_body">
 
-    <div class="info_container">
-        <div class="intro_title">
-            <h2>Instructions:</h2>
+    <div class="quiz_container">
+        <div class="quiz_header">
+            <div class="qns_no">
+                Question 1 of 5
+            </div>
+            <div class="timer_container">
+                <div class="time_text">Time Left:</div>
+                <div class="countdown">30</div>
+            </div>
         </div>
-        <div class="intro_container">
-            <ol>
-                <li class="li_bg">There will be total 5 questions in this quiz.</li>
-                <li>There will have only 30 seconds for per each question.</li>
-            </ol>
+        <div class="qns_container">
+            <div class="qns">Are all snakes poisonous?</div>
+            <div class="opt_container">
+                <div class="option">No</div>
+                <div class="option">Yes</div>
+                <div class="option">Maybe</div>
+                <div class="option">I don't know</div>
+            </div>
         </div>
-
-
-        <div class="rules_title">
-            <h2>Rules:</h2>
+        <div class="nxt_btn">
+            <button type="button" class="nxt_qns_btn">Next</button>
         </div>
-        <div class="rules_container">
-            <ol>
-                <li>You are not allowed to exit the Quiz until you finish all the questions.</li>
-                <li>Once the 30s countdown time is up, you can't select any options <br>and it will be counted as wrong answer.</li>
-                <li>You can't go back to previous question once you have click the next button.</li>
-                <li>You will get 10 points from each of your correct answers.</li>
-            </ol>
-        </div>
-
-        
-    
-        <div class="quiz_start_btn">
-            <button class="quit_btn">Exit Quiz</button>
-            <button class="start_btn">Start Quiz</button>
-        </div>    
     </div>
 
     <script src="script.js"></script>
