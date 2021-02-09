@@ -4,7 +4,7 @@
 }
 
 /*LOG IN PAGE START*/
-.bgimg {  /*website login page background*/
+.login_bg{
     height: 100%;
     width: 100%;
     background-image: url(Image/websitebg.png);
@@ -12,59 +12,101 @@
     background-size: cover; /*always cover the entire screen*/
     position: absolute;
 }
-
-.form-container{   /*login form box background*/
-    width: 380px;
-    height: 500px;
-    background: #FFC98B;
-    position: relative;
-    margin: 8% auto;
-    padding: 5px;
-    border-radius: 20px;
-}
-
-.img-container{   /*BuzzStudy icon img box*/
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.icon{  /*BuzzStudy icon img*/
-    width: 200px;
-    height:100px;
-}
-
-.btn-container{
-    background-color: #E89897;
-    text-align: center;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.togglebtn{
-    padding: 10px 30px;
-    cursor: pointer;
-    background: transparent; /*remove btn default bg*/
-    border: 0;
-    outline: none;
-    position: relative;
-}
-
-
-#btn{
-    top: 0;
-    left: 0;
+/*input[type="text"]::placeholder{
+    align-items: center;
+}*/
+.container{
     position: absolute;
-    width: 200px;
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.right{ /*right side for sign up*/
+    background-color: #E89897;
+    border-radius: 25px;
     height: 100%;
-    background-color: #F5CEC7;
-    border-radius: 30px;
-    transition: .5s;
+    padding: 25px;
+    padding-left: 160px;
+    color: black;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.left{ /*left side for login*/
+    position: relative;
+    background: #EE6A3D;
+    border-radius: 25px;
+    height: 100%;
+    padding: 25px;
+    padding-left: 160px;
 }
 
-.form-control{
-    border-color: #F5CEC7;
+.left h1{
+    color: #FFEABA;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.right h1{
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.row{
+    height: 100%;
+}
+.myLogin{
+    position: relative;
+    height: 50%;
+    border-radius: 25px;
+    color: #EE6A3D;
+    -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+.left .myInput{
+    width: 230px;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+.right .myInput{
+    width: 230px;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+.myForm{
+    position: relative;
+    margin-top: 50px;
+}
+.left .btn{
+    background-color: #E89897;
+    width: 230px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+}
+.right .btn{
+    background-color: #EE6A3D;
+    width: 230px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
 }
 /*LOG IN PAGE END*/
 
@@ -308,6 +350,7 @@
     width: 40px;
     text-align: center;
     font-size: 20px;
+    border-radius: 10px;
 }
 
 .qns_container{
@@ -353,6 +396,35 @@
     padding: 0 20px;
     font-size: 18px;
     font-family: 'Yusei Magic', sans-serif;
+    background: #fabeb4;
+    border: 2px solid #E89897;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.nxt_btn .nxt_qns_btn:hover{
+    color: white;
+    background: #e4817f;
+}
+
+.result_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+    background-color: #ffaea0;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon{
+    font-size: 100px;
+    color: rgb(6, 8, 163);
 }
 /*QUIZ PAGE END*/
 
