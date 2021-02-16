@@ -15,7 +15,7 @@
     <div class="quiz_container">
         <div class="quiz_header">
             <div class="qns_no">
-                Question 1 of 5
+                Question <span id="question-number">1</span> of 10
             </div>
             <div class="timer_container">
                 <div class="time_text">Time Left:</div>
@@ -23,19 +23,19 @@
             </div>
         </div>
         <div class="qns_container">
-            <div class="qns" id="question">Are all snakes poisonous?</div>
+            <div class="qns" id="question"></div>
             <div class="opt_container">
-                <div class="option">No</div>
-                <div class="option">Yes</div>
-                <div class="option">Maybe</div>
-                <div class="option">I don't know</div>
+                <div class="option" id="option01" onclick="javascript:myFunction();"></div>
+                <div class="option" id="option02"></div>
+                <div class="option" id="option03"></div>
+                <div class="option" id="option04"></div>
             </div>
         </div>
         <div class="nxt_btn">
             <button type="button" class="nxt_qns_btn">Next</button>
         </div>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
