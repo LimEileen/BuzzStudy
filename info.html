@@ -7,9 +7,10 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    
   </head>
   <body class="info_body">
-
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_raijrjlw.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
     <div class="info_container">
         <div class="intro_title">
             <h2>Instructions:</h2>
@@ -35,10 +36,10 @@
     
         <div class="quiz_btn">
             <button class="quit_btn">Exit Quiz</button>
-            <button class="start_btn">Start Quiz</button>
+            <button class="start_btn" onclick="changePage()">Start Quiz</button>
         </div>    
     </div>
-
     <script src="script.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
