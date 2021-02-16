@@ -30,6 +30,7 @@
     height: 100%;
     padding: 25px;
     padding-left: 160px;
+    margin-bottom: 50px;
     color: black;
     font-size: 12px;
     justify-content: center;
@@ -54,18 +55,15 @@
     font-weight: 700;
     margin-bottom: 20px;
 }
+.right h2{
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 .row{
     height: 100%;
 }
-.myLogin{
-    position: relative;
-    height: 50%;
-    border-radius: 25px;
-    color: #EE6A3D;
-    -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-}
+
 .left .myInput{
     width: 230px;
     border-radius: 25px;
@@ -170,83 +168,6 @@
     border-radius: 30%;   /*button on-click change radius*/
 }
 /*HOMEPAGE END (categories.html)*/
-
-
-
-/*LEVEL PAGE START*/
-#one{   /*1*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/1.png);
-}
-#two{   /*2*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/2.png);
-}
-#three{   /*3*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/3.png);
-}
-#four{   /*4*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/4.png);
-}
-#five{   /*5*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/5.png);
-}
-#six{   /*6*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/6.png);
-}
-#seven{   /*7*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/7.png);
-}
-#eight{   /*8*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/8.png);
-}
-#nine{   /*9*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/9.png);
-}
-#ten{   /*10*/
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin-right: 50px;
-    background-image: url(levels/10.png);
-
-}
-/*LEVEL PAGE END*/
-
 
 
 /*QUIZ INFO PAGE START*/
@@ -428,3 +349,55 @@
 }
 /*QUIZ PAGE END*/
 
+/*PROFILE PAGE START*/
+.profile_bg{
+    height: 100%;
+    width: 100%;
+    background-color: #F5CEC7;
+}
+.background1{
+    width: 80%;
+    height: 200px;
+    background-color: #FFEABA;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgb(255, 255, 255);
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10% auto 40px auto;
+  }
+#Rewards{
+    font-size: 60px;
+    color: #EE6A3D;
+    margin: 20px;
+    text-decoration: underline #e4817f;
+}
+#Achieve{
+    font-size: 60px;
+    color: #EE6A3D;
+    margin: 20px;
+    text-decoration: underline #e4817f;
+}
+img{
+    height: 100px;
+    width: 200px;
+}
+p{
+    color: black;
+    font-size: 40px;
+}
+#name{
+    font-size: 80px;
+    color: #E89897;
+    margin: 20px;
+    text-decoration: underline #a54645;
+}
+#points{
+    font-size: 50px;
+    color: #EE6A3D;
+    margin: 100px;
+}
+.card-text-name{
+    color: #E89897;
+    margin: 10px;
+}
+/*PROFILE PAGE END*/
