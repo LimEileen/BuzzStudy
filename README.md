@@ -60,6 +60,11 @@ Login Button | Able to login | Able to login? Not able to login | Pass? Fail?
 4. Media:
     * The loading animation used in this site were obtained from https://lottiefiles.com/45857-loading-flying-beee. 
     * The assets drawn, for example, the background, rewards, badges
+https://www.funtrivia.com/en/ForChildren/Assorted-Cartoons-for-Kids-16349.html
+https://www.beano.com/posts/frozen-quiz-how-well-do-you-know-elsa
+https://quizizz.com/admin/quiz/580bfa76e18081560ea81c95/how-much-do-you-know-zootopia
+https://www.wrs.com.sg/en/singapore-zoo/animals-and-zones.html
+https://yowieworld.com/blog/kids-trivia-questions-2/
 
 ## Acknowledgements
 - We received inspiration for this project 
