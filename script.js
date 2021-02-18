@@ -1,16 +1,17 @@
 /*QUIZ JS START*/
 
 //click on button to change page
-var lot = "https://assets7.lottiefiles.com/packages/lf20_raijrjlw.json"  
+//var lot = "https://assets7.lottiefiles.com/packages/lf20_raijrjlw.json"  
 function changePage() {
   document.getElementsByClassName("start_btn").innerHTML = lot;
-  setTimeout(function(), 3000);
-  location.replace("quiz.html")  //change from instruction to start quiz
+  //setTimeout(function(); 3000);
+  location.replace("quiz.html");  //change from instruction to start quiz
 }
 
 
+
 /*QUESTIONS API START*/
-$(document).ready(function(){
+$(document).ready(function () {
   var settings = {
     "url": "https://ipproject-f42a.restdb.io/rest/questions?access_token=BQDkBkYpJbSySoyFXUs7E2RCTzfowVaDzifbbt2bFuJCzUarMF6a0XwAu5rJLIYXhGof4oB-0gWn6_5YOZDxxzN620jTc0kJdvGpPbrQIAbBzZweIS2UJMCzfQk1ZX_JWSldrTiwn47qy5UeYqfrU-uNPO36I5MD__xDYVO2K-WX-2Y1e609-oP9Bgq3mySk_dsrwa7bk6dqquLvyXNgQTCGzgPC64T8wn2tZyVspo8WF8_uGj80JTmEIuxj1dRrzO9rSxzbrI_2oA_NbjotZlTkpQsqbNvkC8GgfPI",
     "method": "GET",
@@ -19,112 +20,96 @@ $(document).ready(function(){
       "x-api-key": "602194e63f9eb665a16892ce"
     },
   };
-  
- var completed = [];
- var qnsCount = 1;
- var userAns = [];
- var score = {
-   correct: 0,
-   incorrect: 0,
- }
- var option = [];
+
+  var completed = [];  //complete qns number
+  var qnsCount = 1; //question 1 of 10
+  var userAns = [];
+  var score = {  
+    correct: 0,
+    incorrect: 0,
+  }
+  var timer = 30;
   $.ajax(settings).done(function (response) {
+    // console.log(response);
+
     allData = response; //store all the questions into a global variable first 
     //create random number between 0-49
     var no = Math.floor((Math.random() * 50));
     var qns = response[no];
     completed.push(no);
     $("#question").html(qns.question);
-    $("#question").data("question-number",0);
+    $("#question").data("question-number", 0);
 
     $(".opt_container").html(`
-        
-                <div class="option">${qns.option01}</div>
-                <div class="option">${qns.option02}</div>
-                <div class="option">${qns.option03}</div>
-                <div class="option">${qns.option04}</div>`);
+        <div class="option" data-answer="yes" id="option01" data-id="option01">${qns.option01}</div>
+        <div class="option" data-answer="yes" id="option02" data-id="option02">${qns.option02}</div>
+        <div class="option" data-answer="yes" id="option03" data-id="option03">${qns.option03}</div>
+        <div class="option" data-answer="yes" id="option04" data-id="option04">${qns.option04}</div>`);
+    console.log(`correct answer ${qns.correct_ans}`);
 
-  option.push(qns.option01);
-  option.push(qns.option02);
-  option.push(qns.option03);
-  option.push(qns.option04);
-  console.log(option);
+    $("#correct_answer").html(qns.correct_ans);
+    
+
+    var downloadTimer = setInterval(function(){
+      document.getElementsByClassName("countdown").innerHTML = timer;
+       timer -= 1;
+    }, 1000);
   });
 
-
-
- 
-  $(".nxt_qns_btn").on("click", function(){
+  $(".nxt_qns_btn").on("click", function () {
     //create random number between 0-49
     var no = Math.floor((Math.random() * 50));
     qnsCount += 1;
-    $("#question-number").html(qnsCount);
     //event listner to detect he complete one question
     completed.push(no);
-    if (completed.length < 11){
+    if (completed.length < 11) {
+      $("#question-number").html(qnsCount);
       //get question from allData
-    var qns = allData[no];
-    $("#question").html(qns.question);
-    $("#question").data("question-number",0);
+      var qns = allData[no];
+      $("#question").html(qns.question);
+      $("#question").data("question-number", 0);
 
-    $(".opt_container").html(`
-        
-                <div class="option">${qns.option01}</div>
-                <div class="option">${qns.option02}</div>
-                <div class="option">${qns.option03}</div>
-                <div class="option">${qns.option04}</div>`);
+      $(".opt_container").html(`
+          <div class="option" data-answer="yes" data-id="option01">${qns.option01}</div>
+          <div class="option" data-answer="yes" data-id="option02">${qns.option02}</div>
+          <div class="option" data-answer="yes" data-id="option03">${qns.option03}</div>
+          <div class="option" data-answer="yes" data-id="option04">${qns.option04}</div>`
+
+      );
+      
+      $("#correct_answer").html(qns.correct_ans);
+      console.log(`correct answer ${qns.correct_ans}`);
     }
-    else{
+    else {
       document.getElementsByClassName("nxt_qns_btn").innerHTML = lot;
       location.replace("result.html");
     }
-
-    
   });
 
 
-  function myFunction() { 
-    if (document.getElementById("option01") == option[0]) {
-    document.getElementById("option01").style.background = "green";
-} else{
-    document.getElementById("demo").style.background = "#ff77ee";
-}
-}
-
-$(".option").on("click", function() {
-    $(this).css("background", "green");
-}); 
-
-  var  option01= document.getElementById("option01");
-  var  option02= document.getElementById("option02");
-  var  option03= document.getElementById("option03");
-  var  option04= document.getElementById("option04");
-  $(".option").on("click", function(){
-    var qns = response[no];
-    console.log(qns);
-    if (option01 == qns.correct_ans){
-      option02.style.backgroundColor = "green";
-    }
-    else{
-      option01.style.backgroundColor = "red";
-    }
-  });
-
-    option01.onclick = function(){
-        option01.style.backgroundColor = "red";
-        console.log(option01);
-    }
-
-    option02.onclick = function(){
-        option02.style.backgroundColor = "green";
-    }
 
 
-  $(".option").on("click",function(showAns){
-    completed.push(no);
-    console.log(completed);
-  });
+  $(".opt_container").on("click", ".option", function (e) {
+ e.preventDefault();
+ 
+ let correctAnswer = $("#correct_answer").html();
+ let userAnswer = $(this).data("id");
+ 
+ //[cher] check answer match 
+ if(correctAnswer === userAnswer){
+ $(this).css("background", "green");
+ score.correct++;
+ }else{
+ $(this).css("background", "red");
+ score.incorrect++;
+ }
+ console.log(`correct answer : ${correctAnswer} : userAns: ${userAnswer}`);
+ console.log($(this).data("answer"));
+ console.log(`correct: ${score.correct} | wrong: ${score.incorrect}`);
+ });
 
+ 
+  
 
 })
 
@@ -184,7 +169,7 @@ $(document).ready(function () {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://idtest-b890.restdb.io/rest/contact",
+      "url": "https://ipproject-f42a.restdb.io/rest/profile?max=2",
       "method": "POST",
       "headers": {
         "content-type": "application/json",
@@ -204,7 +189,7 @@ $(document).ready(function () {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://idtest-b890.restdb.io/rest/contact",
+      "url": "https://ipproject-f42a.restdb.io/rest/profile?max=2",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -216,16 +201,16 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
       let output = "";
-      for(var i = 0){
-        optput = `${output}
-        <td>${response[i].username}</td>`;
-      }
+      /*for(var i = 0; i<3; i++) {
+        output = `${output}
+        <p>${response[i].username}</p>`;
+      }*/
       if(response.length){
         console.log(`User found`);
       }
       $("#card-text-name").html(output);
     });
-  )
+  }
   function checkUsername(username){
   }
 });
