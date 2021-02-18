@@ -19,17 +19,20 @@
             </div>
             <div class="timer_container">
                 <div class="time_text">Time Left:</div>
-                <div class="countdown">30</div>
+                <div id="countdown"></div>
             </div>
         </div>
         <div class="qns_container">
             <div class="qns" id="question"></div>
             <div class="opt_container">
-                <div class="option" id="option01" onclick="javascript:myFunction();"></div>
+                <div class="option" id="option01"></div>
                 <div class="option" id="option02"></div>
                 <div class="option" id="option03"></div>
                 <div class="option" id="option04"></div>
             </div>
+            <!-- [cher]-->
+            <div class="disable" id="option_IdArr" style="display:none;"></div>
+            <div class="answer" id="correct_answer" style="display:none;"></div>
         </div>
         <div class="nxt_btn">
             <button type="button" class="nxt_qns_btn">Next</button>
@@ -39,4 +42,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-    
