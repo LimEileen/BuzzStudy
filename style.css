@@ -17,30 +17,18 @@
 }*/
 .container{
     position: absolute;
-    max-width: 800px;
+    max-width: 500px;
     height: 500px;
     margin: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.right{ /*right side for sign up*/
-    background-color: #E89897;
-    border-radius: 25px;
-    height: 100%;
-    padding: 25px;
-    padding-left: 160px;
-    margin-bottom: 50px;
-    color: black;
-    font-size: 12px;
-    justify-content: center;
-    align-items: center;
-}
-.left{ /*left side for login*/
+
+.left{ /*for login*/
     position: relative;
     background: #EE6A3D;
     border-radius: 25px;
-    height: 100%;
     padding: 25px;
     padding-left: 160px;
 }
@@ -48,60 +36,37 @@
 .left h1{
     color: #FFEABA;
     font-weight: 700;
-    margin-bottom: 20px;
-}
-.right h1{
-    color: white;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.right h2{
-    color: white;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.row{
-    height: 100%;
+    position: relative;
+    right: 15px;
+    bottom: 30px;
 }
 
 .left .myInput{
     width: 230px;
     border-radius: 25px;
     padding: 10px;
+    position: relative;
+    right: 95px;
+    bottom: 30px;
     border: none;
     -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
 }
-.right .myInput{
-    width: 230px;
-    border-radius: 25px;
-    padding: 10px;
-    border: none;
-    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-}
+
 .myForm{
     position: relative;
-    margin-top: 50px;
+    margin: 65px;
 }
 .left .btn{
     background-color: #E89897;
-    width: 230px;
+    width: 250px;
     border: none;
     border-radius: 25px;
     padding: 10px;
-    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-}
-.right .btn{
-    background-color: #EE6A3D;
-    width: 230px;
-    border: none;
-    border-radius: 25px;
-    padding: 10px;
+    position: relative;
+    right: 95px;
+    bottom: 30px;
     -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
