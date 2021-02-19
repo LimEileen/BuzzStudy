@@ -5,7 +5,7 @@ The overview of this web application, is for users that wanting to know and test
 ## GitHub Link: 
 
 ## Design Process:
-This web application are for users that are intrested in facts of animals, or trying to use the memory they have, to have a quiz on the caterogires of animals and cartoon shows. Users may have forgotten on the shows that have watched when they were still young. 
+This web application are for users that are intrested in facts of animals, or trying to use the memory they have, to have a quiz on the caterogires of animals and cartoon shows. Users may have forgotten on the shows that have watched when they were still young. This set of questions can help users to look back or even now, the cartoon shows they have watched before. It is their childhood memories. As for the animals questions, for users that may want to know more about animals, they can try this quiz, and they can keep trying to get a memory of it. 
 
 ## Features
 1. Navigation Bar:
@@ -60,12 +60,12 @@ Login Button | Able to login | Able to login? Not able to login | Pass? Fail?
 4. Media:
     * The loading animation used in this site were obtained from https://lottiefiles.com/45857-loading-flying-beee. 
     * The assets drawn, for example, the background, rewards, badges
-https://www.funtrivia.com/en/ForChildren/Assorted-Cartoons-for-Kids-16349.html
-https://www.beano.com/posts/frozen-quiz-how-well-do-you-know-elsa
-https://quizizz.com/admin/quiz/580bfa76e18081560ea81c95/how-much-do-you-know-zootopia
-https://www.wrs.com.sg/en/singapore-zoo/animals-and-zones.html
-https://yowieworld.com/blog/kids-trivia-questions-2/
+    * Cartoon questions used in this site were obtained from https://www.funtrivia.com/en/ForChildren/Assorted-Cartoons-for-Kids-16349.html.
+    * Frozen questions used in this site were obtained from https://www.beano.com/posts/frozen-quiz-how-well-do-you-know-elsa. 
+    * Zootopia questions used in this site were obtained from https://quizizz.com/admin/quiz/580bfa76e18081560ea81c95/how-much-do-you-know-zootopia. 
+    * Animals questions used in this site were obtained from https://www.wrs.com.sg/en/singapore-zoo/animals-and-zones.html. 
+    * Animals questions used in this site were obtained from https://yowieworld.com/blog/kids-trivia-questions-2/.
 
 ## Acknowledgements
-- We received inspiration for this project 
+- We received inspiration for this project thinking to create a quiz that is fun, relax and knowledgeable for the users. It will not be too stressful for them, and also make them feel happy when they answer the questions they know.
 - We received the helped from our mentors whenever we are in doubt.
