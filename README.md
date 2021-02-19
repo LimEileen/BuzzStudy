@@ -1,15 +1,15 @@
 # BuzzStudy
 For IP project.
-The overview of this web application, is for users that wanting to know and test on their current knowledge or memory on the animals and cartoon shows. This web app have different catergories of topics, different kinds of animals and cartoon show's questions that will be tested. 
+This is a Quiz Web Application. The overview of this web application, is for users that wanting to know and test on their current knowledge or memory on the animals and cartoon shows. This web app have two different catergories of topics, different kinds of animals and cartoon show's questions that will be tested. By answering the quiz, there will also achieve and collect points which can use to redeem rewards and badges.
 
 ## GitHub Link: 
 
 ## Design Process:
-This web application are for users that are intrested in facts of animals, or trying to use the memory they have, to have a quiz on the caterogires of animals and cartoon shows. Users may have forgotten on the shows that have watched when they were still young. This set of questions can help users to look back or even now, the cartoon shows they have watched before. It is their childhood memories. As for the animals questions, for users that may want to know more about animals, they can try this quiz, and they can keep trying to get a memory of it. 
+This web application are targeted to users aged from 7 to 12 that are intrested in facts of animals, or trying to use the memory they have, to have a quiz on the caterogires of animals and cartoon shows. Users may have forgotten on the shows that have watched when they were still young. This set of questions can help users to look back or even now, the cartoon shows they have watched before. It is their childhood memories. As for the animals questions, for users that may want to know more about animals, they can try this quiz, and they can keep trying to get a memory of it. 
 
 ## Features
-1. Navigation Bar:
-    * 
+1. Navigation Bar
+    * allows users to click and direct to the relevant pages.
     * 
 2. 
 
