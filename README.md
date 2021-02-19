@@ -8,18 +8,37 @@ This is a Quiz Web Application. The overview of this web application, is for use
 This web application are targeted to users aged from 7 to 12 that are intrested in facts of animals, or trying to use the memory they have, to have a quiz on the caterogires of animals and cartoon shows. Users may have forgotten on the shows that have watched when they were still young. This set of questions can help users to look back or even now, the cartoon shows they have watched before. It is their childhood memories. As for the animals questions, for users that may want to know more about animals, they can try this quiz, and they can keep trying to get a memory of it. 
 
 ## Features
-1. Navigation Bar
-    * allows users to click and direct to the relevant pages.
-    * 
-2. 
+1. Login Page
+    - allows users to store their name and collected points.
+2. Navigation Bar
+    - allows users to click and direct to the relevant pages.
+3. Instruction Page
+    - This page contain some of the rules and instructions about the quiz. 
+    - If users want to continue after reading the instructions, there have a "Start Quiz" button. 
+    - If users don't want to continue, they can click on "Quit Quiz" button to go back to homepage.
+4. Result Page
+    - show the final results to the users
+    - Contain "Try Again" button for users to retake the quiz.
+    - Contain "Back Home" button for users to return back to homepage.
+5. Quiz Page
+    - Page that show question and options for users to click on.
+    - Each quiz containe 10 questions. After 10 questions, users will be direct to result page.
+    - There is also a 30 seconds coutdown. If the time ended, the users are not able to click on any options.
+6. Profile Page
+    - Contain users' information such as name, collected points, rewards and badges.
+
 
 ### Features to Implement in the future:
 1. More questions:
-    * Allow users to have a more variety to choose from.
-2. More badges:
-    * 
-3. More rewards:
-    * 
+    - Allow users to have a more variety to choose from.
+2. More categories:
+    - Involve more categories for users to learn.
+    - Attract more users as they can learn a lot of things by using this website.
+3. More badges:
+    - For now, we only have one badges for each quiz.
+    - Hope can implement more badges to encourage users challenge the quiz.
+4. More rewards:
+    - As the targeted user are primary students, they will get attracted by rewards because it is like a presents to encourage them for complete quiz.
 
 ## Testing:
 Test# | Expected Result | Actual Result | Pass/Fail
