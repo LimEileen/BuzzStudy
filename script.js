@@ -1,16 +1,6 @@
 /*QUIZ JS START*/
 
-//click on button to change page
-//var lot = "https://assets7.lottiefiles.com/packages/lf20_raijrjlw.json"  
-function changePage() {
-  document.getElementsByClassName("start_btn").innerHTML = lot;
-  //setTimeout(function(); 3000);
-  location.replace("quiz.html");  //change from instruction to start quiz
-}
-
-
-
-/*QUESTIONS API START*/
+/*ANIMAL QUESTIONS API START*/
 $(document).ready(function () {
   var settings = {
     "url": "https://ipproject-f42a.restdb.io/rest/questions?access_token=BQDkBkYpJbSySoyFXUs7E2RCTzfowVaDzifbbt2bFuJCzUarMF6a0XwAu5rJLIYXhGof4oB-0gWn6_5YOZDxxzN620jTc0kJdvGpPbrQIAbBzZweIS2UJMCzfQk1ZX_JWSldrTiwn47qy5UeYqfrU-uNPO36I5MD__xDYVO2K-WX-2Y1e609-oP9Bgq3mySk_dsrwa7bk6dqquLvyXNgQTCGzgPC64T8wn2tZyVspo8WF8_uGj80JTmEIuxj1dRrzO9rSxzbrI_2oA_NbjotZlTkpQsqbNvkC8GgfPI",
@@ -31,7 +21,6 @@ $(document).ready(function () {
   var option = [];
   var totalPoints = 0;
   $.ajax(settings).done(function (response) {
-    // console.log(response);
 
     allData = response; //store all the questions into a global variable first 
     //create random number between 0-49
@@ -47,7 +36,7 @@ $(document).ready(function () {
         <div class="option" data-answer="yes" id="option02" data-id="option02">${qns.option02}</div>
         <div class="option" data-answer="yes" id="option03" data-id="option03">${qns.option03}</div>
         <div class="option" data-answer="yes" id="option04" data-id="option04">${qns.option04}</div>`);
-    console.log(`correct answer ${qns.correct_ans}`);
+    //console.log(`correct answer ${qns.correct_ans}`);
 
     $("#correct_answer").html(qns.correct_ans);
 
@@ -70,19 +59,20 @@ $(document).ready(function () {
       $("#question").data("question-number", 0);
 
       $(".opt_container").html(`
-          <div class="option" data-answer="yes" data-id="option01">${qns.option01}</div>
-          <div class="option" data-answer="yes" data-id="option02">${qns.option02}</div>
-          <div class="option" data-answer="yes" data-id="option03">${qns.option03}</div>
-          <div class="option" data-answer="yes" data-id="option04">${qns.option04}</div>`
+          <div class="option" data-answer="yes" id="option01" data-id="option01">${qns.option01}</div>
+          <div class="option" data-answer="yes" id="option02" data-id="option02">${qns.option02}</div>
+          <div class="option" data-answer="yes" id="option03" data-id="option03">${qns.option03}</div>
+          <div class="option" data-answer="yes" id="option04" data-id="option04">${qns.option04}</div>`
 
       );
 
       $("#correct_answer").html(qns.correct_ans);
-      console.log(`correct answer ${qns.correct_ans}`);
+      //console.log(`correct answer ${qns.correct_ans}`);
     }
-    else {
-      document.getElementsByClassName("nxt_qns_btn").innerHTML = lot;
-      location.replace("result.html");
+    if(completed.length ==10) {
+      document.getElementById("next").onclick = function () {
+        location.href = "animalsresult.html";
+    };
     }
   });
 
@@ -104,31 +94,20 @@ $(document).ready(function () {
         totalPoints = 0;
       } else {
         totalPoints -= 10;
-      }      
+      }     
     }
-    $(".totalMark").html(score.correct)
-    //[cher]disable the rest
-    //$(".option");
+    
     $( ".option" ).each(function( index ) {
-      //running option
-      //console.log("runing....");
       //let correctAnswer = $("#correct_answer").html();
       let opt = $(this).data("id"); //this relates to each option that was found
-      //we only care whether it is the current selected option
       if (userAnswer !== opt) { 
-        //@TODO set code to disable
         $( this ).prop( "disabled", true );
         $(this).css({"background": "grey","border":"1px solid #333"});
       }
 
-      
     });
 
-
-
-
-
-    console.log(`correct answer : ${correctAnswer} : userAns: ${userAnswer}`);
+    //console.log(`correct answer : ${correctAnswer} : userAns: ${userAnswer}`);
     console.log($(this).data("answer"));
     console.log(`correct: ${score.correct} | wrong: ${score.incorrect}`);
     console.log(points);
@@ -138,6 +117,19 @@ $(document).ready(function () {
   var timer = 30;
   var downloadTimer = setInterval(function () {
     if (timer < 0) {
+      document.getElementById('option01').disabled = true;
+      document.getElementById('option02').disabled = true;
+      document.getElementById('option03').disabled = true;
+      document.getElementById('option04').disabled = true;
+      document.getElementById('option01').style.background="grey";
+      document.getElementById('option02').style.background="grey";
+      document.getElementById('option03').style.background="grey";
+      document.getElementById('option04').style.background="grey";
+      if (totalPoints <= 0) {
+        totalPoints = 0;
+      } else {
+        totalPoints -= 10;
+      }     
     } else {
       document.getElementById("countdown").innerHTML = timer;
     }
@@ -145,8 +137,9 @@ $(document).ready(function () {
   }, 1000);
 
 
-
 })
+
+
 
 //PROFILE START//
 function station() {//stationery
@@ -184,26 +177,34 @@ function cart() {//cartoon
     alert("You have collected cartoon badge. Congrats!");
   }
 }
+
+function login() {
+  location.replace("categories.html");
+}
+
+function logout() {
+  location.replace("index.html");
+}
+
 $(document).ready(function () {
   const APIKEY = "602194e63f9eb665a16892ce";
   $("#btn-login").on("click", function (e) {
     e.preventDefault();
 
-    let name = $("#username").val();
+    let username = $("#username").val();
     let password = $("#password").val();
-    let points = totalPoints;
-    $("#number").val(points);
-    
+    var points = $("#number").val();
+    console.log(username);
     login(username, password);
-    location.replace("categories.html")
+    
   });
 
-  function check(name, password, points){
-    var jsondata = {"name": name,"password": password, "points": points};
+  function check(username, password, points){
+    var jsondata = {"name": username,"password": password, "points": points};
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://ipproject-f42a.restdb.io/rest/profile?max=2",
+      "url": "https://ipproject-f42a.restdb.io/rest/profile",
       "method": "POST",
       "headers": {
         "content-type": "application/json",
@@ -219,11 +220,12 @@ $(document).ready(function () {
     });
   }
 
-  function login(name, password, points){
+  function login(username, password, points){
+    let query = `{"name": "${username}", "password": "${password}"}`;
     var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://ipproject-f42a.restdb.io/rest/profile?max=2",
+      //"async": true,
+      //"crossDomain": true,
+      "url": "https://ipproject-f42a.restdb.io/rest/profile",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -234,18 +236,35 @@ $(document).ready(function () {
     
     $.ajax(settings).done(function (response) {
       console.log(response);
-      let output = "";
-      for(var i = 0; i<3; i++){
-        output = `${output}
-        <p>${response[i].name}</p>
-        <h3>${response[i].points}</h3>`;
-      }
       if(response.length){
         console.log(`User found`);
+        location.replace("categories.html")
       }
-      $("#card-text-name").html(output);
+      $("#card-text-name").html(query);
     });
   }
   function checkUsername(username){
+  }
+
+  function num(points){
+    var jsondata = {"points": "totalPoints"};
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://ipproject-f42a.restdb.io/rest/profile/(points)",
+      "method": "PUT",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache"
+      },
+      "processData": false,
+      "data": JSON.stringify(jsondata)
+    }
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+
   }
 });
