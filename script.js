@@ -24,11 +24,12 @@ $(document).ready(function () {
   var completed = [];  //complete qns number
   var qnsCount = 1; //question 1 of 10
   var userAns = [];
-  var score = {  
+  var score = {
     correct: 0,
     incorrect: 0,
   }
-  var timer = 30;
+  var option = [];
+  var totalPoints = 0;
   $.ajax(settings).done(function (response) {
     // console.log(response);
 
@@ -37,8 +38,9 @@ $(document).ready(function () {
     var no = Math.floor((Math.random() * 50));
     var qns = response[no];
     completed.push(no);
+    
     $("#question").html(qns.question);
-    $("#question").data("question-number", 0);
+    //$("#question").data("question-number", 0);
 
     $(".opt_container").html(`
         <div class="option" data-answer="yes" id="option01" data-id="option01">${qns.option01}</div>
@@ -48,20 +50,18 @@ $(document).ready(function () {
     console.log(`correct answer ${qns.correct_ans}`);
 
     $("#correct_answer").html(qns.correct_ans);
-    
 
-    var downloadTimer = setInterval(function(){
-      document.getElementsByClassName("countdown").innerHTML = timer;
-       timer -= 1;
-    }, 1000);
   });
 
   $(".nxt_qns_btn").on("click", function () {
+    timer = 30;
     //create random number between 0-49
     var no = Math.floor((Math.random() * 50));
     qnsCount += 1;
     //event listner to detect he complete one question
     completed.push(no);
+    
+
     if (completed.length < 11) {
       $("#question-number").html(qnsCount);
       //get question from allData
@@ -76,7 +76,7 @@ $(document).ready(function () {
           <div class="option" data-answer="yes" data-id="option04">${qns.option04}</div>`
 
       );
-      
+
       $("#correct_answer").html(qns.correct_ans);
       console.log(`correct answer ${qns.correct_ans}`);
     }
@@ -87,85 +87,119 @@ $(document).ready(function () {
   });
 
 
-
-
   $(".opt_container").on("click", ".option", function (e) {
- e.preventDefault();
- 
- let correctAnswer = $("#correct_answer").html();
- let userAnswer = $(this).data("id");
- 
- //[cher] check answer match 
- if(correctAnswer === userAnswer){
- $(this).css("background", "green");
- score.correct++;
- }else{
- $(this).css("background", "red");
- score.incorrect++;
- }
- console.log(`correct answer : ${correctAnswer} : userAns: ${userAnswer}`);
- console.log($(this).data("answer"));
- console.log(`correct: ${score.correct} | wrong: ${score.incorrect}`);
- });
+    e.preventDefault();
+    let correctAnswer = $("#correct_answer").html();
+    let userAnswer = $(this).data("id");
 
- 
-  
+
+    if (correctAnswer === userAnswer) {
+      $(this).css("background", "green");
+      score.correct++;
+      totalPoints += 10;
+    } else {
+      $(this).css("background", "red");
+      score.incorrect++;
+      if (totalPoints <= 0) {
+        totalPoints = 0;
+      } else {
+        totalPoints -= 10;
+      }      
+    }
+    $(".totalMark").html(score.correct)
+    //[cher]disable the rest
+    //$(".option");
+    $( ".option" ).each(function( index ) {
+      //running option
+      //console.log("runing....");
+      //let correctAnswer = $("#correct_answer").html();
+      let opt = $(this).data("id"); //this relates to each option that was found
+      //we only care whether it is the current selected option
+      if (userAnswer !== opt) { 
+        //@TODO set code to disable
+        $( this ).prop( "disabled", true );
+        $(this).css({"background": "grey","border":"1px solid #333"});
+      }
+
+      
+    });
+
+
+
+
+
+    console.log(`correct answer : ${correctAnswer} : userAns: ${userAnswer}`);
+    console.log($(this).data("answer"));
+    console.log(`correct: ${score.correct} | wrong: ${score.incorrect}`);
+    console.log(points);
+  });
+
+
+  var timer = 30;
+  var downloadTimer = setInterval(function () {
+    if (timer < 0) {
+    } else {
+      document.getElementById("countdown").innerHTML = timer;
+    }
+    timer -= 1;
+  }, 1000);
+
+
 
 })
 
-/* PROFILE START */
-function none(){
-  //var less = //for stationery
-  if (less<300){
-    alert("You have yet to reach 300 points");
+//PROFILE START//
+function station() {//stationery
+  if (totalPoints<350){
+    alert("You have yet to reach 350 points");
   } else{
-    alert("You have redeem a whole set of stationery. Thank You!")
-  }
-
-  //var bbt = //for bbt
-  if (bbt<600){
-    alert("You have yet to reach 600 points");
-  } else{
-    alert("You have redeem a free bubble tea. Thank You!")
-  }
-
-  //var des = //for dessert
-  if (des<1000){
-    alert("You have yet to reach 1000 points");
-  } else{
-    alert("You have redeem a free dessert. Thank You!")
-  }
-
-  //var ani = //for animal badge
-  if (ani<1000){
-    alert("You have yet to complete the qns? or yet to reach 400 points?");
-  } else{
-    alert("You have redeem a free dessert. Thank You!")
-  }
-
-  //var car = //for cartoon badge
-  if (car<1000){
-    alert("You have yet to complete the qns? or yet to reach 800 points?");
-  } else{
-    alert("You have redeem a free dessert. Thank You!")
+    alert("You have redeemed a set of stationery. Thank You!");
   }
 }
-
-/* LOGIN PAGE START*/
+function bbt() {//bbt
+  if (totalPoints<650){
+    alert("You have yet to reach 650 points");
+  } else{
+    alert("You have redeemed a bubble tea. Thank You!");
+  }
+}
+function dess() {//dessert
+  if (totalPoints<1000){
+    alert("You have yet to reach 1000 points");
+  } else{
+    alert("You have redeemed a dessert. Thank You!");
+  }
+}
+function animal() {//animal
+  if (totalPoints<500){
+    alert("You have yet to reach 500 points");
+  } else{
+    alert("You have collected animal badge. Congrats!");
+  }
+}
+function cart() {//cartoon
+  if (totalPoints<500){
+    alert("You have yet to reach 500 points");
+  } else{
+    alert("You have collected cartoon badge. Congrats!");
+  }
+}
 $(document).ready(function () {
   const APIKEY = "602194e63f9eb665a16892ce";
   $("#btn-login").on("click", function (e) {
     e.preventDefault();
 
-    let username = $("#username").val();
+    let name = $("#username").val();
     let password = $("#password").val();
+    let points = totalPoints;
+    $("#number").val(points);
     
     login(username, password);
     location.replace("categories.html")
   });
 
-  function check(username, password){
-    var jsondata = {"username": username,"password": password};
+  function check(name, password, points){
+    var jsondata = {"name": name,"password": password, "points": points};
     var settings = {
       "async": true,
       "crossDomain": true,
@@ -185,7 +219,7 @@ $(document).ready(function () {
     });
   }
 
-  function login(username, password){
+  function login(name, password, points){
     var settings = {
       "async": true,
       "crossDomain": true,
@@ -201,10 +235,11 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
       console.log(response);
       let output = "";
-      /*for(var i = 0; i<3; i++) {
+      for(var i = 0; i<3; i++){
         output = `${output}
-        <p>${response[i].username}</p>`;
-      }*/
+        <p>${response[i].name}</p>
+        <h3>${response[i].points}</h3>`;
+      }
       if(response.length){
         console.log(`User found`);
       }
@@ -214,4 +249,3 @@ $(document).ready(function () {
   function checkUsername(username){
   }
 });
-
