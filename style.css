@@ -15,6 +15,11 @@
 /*input[type="text"]::placeholder{
     align-items: center;
 }*/
+#logo{
+    position: relative;
+    bottom: 55px;
+    right: 100px;
+}
 .container{
     position: absolute;
     max-width: 500px;
@@ -34,7 +39,7 @@
 }
 
 .left h1{
-    color: #FFEABA;
+    color: #e4817f;
     font-weight: 700;
     position: relative;
     right: 15px;
