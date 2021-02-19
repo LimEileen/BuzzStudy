@@ -45,6 +45,7 @@
     right: 15px;
     bottom: 30px;
     margin-bottom: 15px;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .left .myInput{
@@ -59,6 +60,7 @@
     -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .myForm{
@@ -77,6 +79,7 @@
     -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
     box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    font-family: 'Yusei Magic', sans-serif;
 }
 /*LOG IN PAGE END*/
 
