@@ -1,6 +1,6 @@
 # BuzzStudy
 For IP project.
-This is a Quiz Web Application. The overview of this web application, is for users that wanting to know and test on their current knowledge or memory on the animals and cartoon shows. This web app have two different catergories of topics, different kinds of animals and cartoon show's questions that will be tested. By answering the quiz, there will also achieve and collect points which can use to redeem rewards and badges.
+This is a Quiz Web Application. The overview of this web application, is for users that wanting to know and test on their current knowledge or memory on the animals and cartoon shows. This web app have two different categories of topics, different kinds of animals and cartoon show's questions that will be tested. By answering the quiz, there will also achieve and collect points which can use to redeem rewards and badges.
 
 ## GitHub Link: 
 - https://github.com/LimEileen/BuzzStudy/settings
